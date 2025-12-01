@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/SquareBusinessIntelligence/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -16,7 +16,9 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: 'esbuild'
   },
   define: {
     // Suppress React Router future flag warnings in development
