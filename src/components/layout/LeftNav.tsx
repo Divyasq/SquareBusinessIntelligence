@@ -126,7 +126,15 @@ const mainNavItems: NavItem[] = [
           { id: 'fs-customer-directory', label: 'Customer directory' }
         ]
       },
-      { id: 'fs-custom-reports', label: 'Custom Reports' }
+      { id: 'fs-custom-reports', label: 'Custom Reports' },
+      {
+        id: 'fs-accounting',
+        label: 'Accounting',
+        hasSubmenu: true,
+        submenuItems: [
+          { id: 'fs-deposit-received', label: 'Deposit Received' }
+        ]
+      }
     ]
   },
 
@@ -187,6 +195,7 @@ export function LeftNav() {
       else if (subItem.id === 'fs-dashboard') navigate('/fs-prototype');
       else if (subItem.id === 'fs-reports') toggleSubmenuItem(subItem.id);
       else if (subItem.id === 'fs-custom-reports') navigate('/fs-prototype/custom-reports');
+      else if (subItem.id === 'fs-deposit-received') navigate('/fs-prototype/accounting/deposit-received');
       else if (subItem.id.startsWith('fs-')) {
         const reportType = subItem.id.replace('fs-', '');
         navigate(`/fs-prototype/reports/${reportType}`);
