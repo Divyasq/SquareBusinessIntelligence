@@ -42,6 +42,7 @@ import { ProcurementPage } from './pages/ProcurementPage';
 import { BillPayPage } from './pages/BillPayPage';
 import { ProfitabilityAnalyticsPage } from './pages/ProfitabilityAnalyticsPage';
 import { CashFlowIntelligencePage } from './pages/CashFlowIntelligencePage';
+import { DepositReceivedPage } from './pages/DepositReceivedPage';
 
 function App() {
   return (
@@ -98,6 +99,7 @@ function App() {
                             <Route path="fs-prototype" element={<FinancialSuitePage />} />
                             <Route path="fs-prototype/deferred-sales" element={<DeferredSalesPage />} />
                             <Route path="fs-prototype/custom-reports" element={<CustomReportsPage />} />
+                            <Route path="fs-prototype/accounting/deposit-received" element={<DepositReceivedPage />} />
                             <Route path="fs-prototype/reports/:reportType" element={<ReportsPage />} />
                           </Route>
                         </Routes>
